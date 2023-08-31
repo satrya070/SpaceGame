@@ -22,6 +22,10 @@ public class ShipMovement : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
     }
 
+    void Start()
+    {
+    }
+
     void Update()
     {
         thrustAmount = ControlInput.thrustAmount;
