@@ -16,7 +16,8 @@ public class followCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(shipPosition.position.x, shipPosition.position.y, shipPosition.position.z) + -shipPosition.forward * 20;
+        // move cam 5 above, 20 back behind ship for 3rd view
+        transform.position = (shipPosition.position + shipPosition.up * 5) + (-shipPosition.forward * 20);
         transform.rotation = shipPosition.rotation;
         Debug.Log(shipPosition.forward);
     }
